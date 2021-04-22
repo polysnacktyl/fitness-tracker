@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
@@ -26,7 +26,7 @@ console.log(message);
 
 });
 
-// app.use(require("./routes/api.js"));
+app.use(require("./routes/api.js"));
 app.use(require("./routes/view"))
 
 app.listen(PORT, () => {
