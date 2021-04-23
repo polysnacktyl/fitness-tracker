@@ -16,7 +16,6 @@ app.use(require("./routes/view"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  useCreateIndex: true,
   useFindAndModify: false
 });
 
@@ -27,8 +26,6 @@ db.Workout.create({ name: "workout" })
   .catch(({message}) => {
     console.log(message);
   });
-
-
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
