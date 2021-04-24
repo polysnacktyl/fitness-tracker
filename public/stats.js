@@ -200,6 +200,7 @@ function workoutNames(data) {
     });
   });
 
+  // return de-duplicated array with JavaScript `Set` object
   return [...new Set(workouts)];
 }
 
