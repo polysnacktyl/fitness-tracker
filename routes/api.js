@@ -42,15 +42,15 @@ router.get("/api/workouts/range", ({ body }, res) => {
     });
   });
 
-// router.get("/api/workouts/range", (req, res) => {
-//   Workout.find({})
-//     .then(workout => {
-//       res.json(workout);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
+router.get("/api/workouts/range", (req, res) => {
+  Workout.find({})
+    .then(workout => {
+      res.json(workout);
+    })
+    .catch(err => {
+      res.json(err);
+    });
+});
 
 router.delete("/api/workouts", ({ body }, res) => {
   Workout.findByIdAndDelete(body.id)
