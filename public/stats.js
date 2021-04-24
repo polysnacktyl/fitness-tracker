@@ -173,17 +173,6 @@ function populateChart(data) {
   });
 }
 
-function calculateDuration(data) {
-  let durations = [];
-
-  data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      durations.push(exercise.duration);
-    });
-  });
-  return durations;
-}
-
 function calculateTotalWeight(data) {
   let totals = [];
 
