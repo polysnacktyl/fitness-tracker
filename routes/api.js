@@ -42,7 +42,7 @@ router.get("/api/workouts/range", ({ body }, res) => {
     });
   });
 
-router.get("/api/workouts", (req, res) => {
+router.get("/api/workouts", ( {body}, res) => {
   Workout.find({})
     .then(workout => {
       res.json(workout);
