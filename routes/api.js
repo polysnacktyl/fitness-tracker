@@ -37,8 +37,8 @@ router.get("/api/workouts/range", ({ body }, res) => {
       }
     }
   ])
-    .then(dbWorkout => {
-      res.json(dbWorkout);
+    .then(Workout => {
+      res.json(Workout);
     });
   });
 
